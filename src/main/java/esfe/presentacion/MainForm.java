@@ -63,6 +63,16 @@ public class MainForm extends JFrame {
             UserReadingForm userReadingForm=new UserReadingForm(this); // Cuando se hace clic, crea una nueva instancia de UserReadingForm (formulario para leer/listar usuarios), pasándole la instancia actual de MainForm como padre.
             userReadingForm.setVisible(true); // Hace visible el formulario de lectura de usuarios.
         });
+        //  Menú para Películas
+        JMenu menuPeliculas = new JMenu("Películas");
+        menuBar.add(menuPeliculas);
+
+        JMenuItem itemGestionPeliculas = new JMenuItem("Gestión de Películas");
+        menuPeliculas.add(itemGestionPeliculas);
+        itemGestionPeliculas.addActionListener(e -> {
+            PeliculaReadingForm peliculaReadingForm = new PeliculaReadingForm(this);
+            peliculaReadingForm.setVisible(true);
+        });
 
     }
 }
